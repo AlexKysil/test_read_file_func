@@ -1,15 +1,18 @@
-import atexit
-import datetime
-import pytest
+''' Framoewrok global fixtures and hooks'''
+
 import os
 import sys
 import re
-
+import atexit
+import datetime
 from logging.handlers import MemoryHandler
 from logging import getLogger, StreamHandler, INFO, Formatter, CRITICAL, DEBUG, shutdown
+import pytest
 
 LOGGER = getLogger('logger')
 
+
+# pylint: disable=logging-fstring-interpolation
 @pytest.hookimpl(tryfirst=True, hookwrapper=True)
 def pytest_runtest_makereport(item, call):
     '''This hook is to get test status(failed/passed) for test'''
@@ -18,7 +21,8 @@ def pytest_runtest_makereport(item, call):
 
     if call.when == 'teardown':
         LOGGER.info(
-            f"Test: {item._nodeid} Result: {rep.outcome}, Exception:{call.excinfo.typename if call.excinfo else ''} {call.excinfo.value if call.excinfo else ''}")
+            f"Test: {item._nodeid} Result: {rep.outcome},  \
+            Exception:{call.excinfo.typename if call.excinfo else ''} {call.excinfo.value if call.excinfo else ''}")
 
 
 @pytest.fixture(scope="function", autouse=True)
@@ -37,6 +41,7 @@ def logger_fixture(request):
         del logger
 
 
+# pylint: disable=unused-argument
 @pytest.fixture(scope="session", autouse=True)
 def create_logger(request):
     """Creating custom logger for each test"""
@@ -55,6 +60,7 @@ def create_logger(request):
         logger.addHandler(console_handler)
 
 
+# pylint: disable=unused-argument
 def create_logger_process(request):
     """
     Create logger for process
@@ -63,7 +69,6 @@ def create_logger_process(request):
     """
     logger = getLogger("logger")
     logger.setLevel(INFO)
-
 
     console_handler = StreamHandler(sys.stderr)
     console_handler.setLevel(INFO)
