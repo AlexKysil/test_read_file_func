@@ -3,7 +3,7 @@
 import sys
 from io import StringIO
 
-# pylint: disable=W0201
+# pylint: disable=attribute-defined-outside-init
 class ReadTeminalOutput(list):
     """
     This is helper class - context manager to read terminal output
