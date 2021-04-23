@@ -1,3 +1,5 @@
+''' Framoewrok global fixtures and hooks'''
+
 import atexit
 import datetime
 import pytest
