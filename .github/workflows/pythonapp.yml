@@ -24,4 +24,4 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: <========== Check Code with pylint ==========>
       run: |
-        find . -type f -name "*.py" | xargs pylint --reports=y text
+        find . -type f -name "*.py" | xargs pylint --reports=y
