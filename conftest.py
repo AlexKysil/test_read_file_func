@@ -10,6 +10,7 @@ from logging import getLogger, StreamHandler, INFO, Formatter, CRITICAL, DEBUG, 
 
 LOGGER = getLogger('logger')
 
+
 @pytest.hookimpl(tryfirst=True, hookwrapper=True)
 def pytest_runtest_makereport(item, call):
     '''This hook is to get test status(failed/passed) for test'''
@@ -18,7 +19,8 @@ def pytest_runtest_makereport(item, call):
 
     if call.when == 'teardown':
         LOGGER.info(
-            f"Test: {item._nodeid} Result: {rep.outcome}, Exception:{call.excinfo.typename if call.excinfo else ''} {call.excinfo.value if call.excinfo else ''}")
+            f"Test: {item._nodeid} Result: {rep.outcome},  \
+            Exception:{call.excinfo.typename if call.excinfo else ''} {call.excinfo.value if call.excinfo else ''}")
 
 
 @pytest.fixture(scope="function", autouse=True)
@@ -63,7 +65,6 @@ def create_logger_process(request):
     """
     logger = getLogger("logger")
     logger.setLevel(INFO)
-
 
     console_handler = StreamHandler(sys.stderr)
     console_handler.setLevel(INFO)
