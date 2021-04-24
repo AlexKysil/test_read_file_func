@@ -33,3 +33,10 @@ def test_read_with_wrong_nlines(valid_path, n_lines, expected_error):
             read_file_return_lines(valid_path, n_lines)
     except(TypeError, FileNotFoundError) as ex:
         assert str(ex) == expected_error
+
+
+
+def test_not_txt():
+    pass
+
+
