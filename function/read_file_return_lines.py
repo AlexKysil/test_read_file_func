@@ -9,7 +9,7 @@ def read_file_return_lines(file_path, N_lines=None):
     """
 
     if not file_path:
-        raise ValueError(f'file_path valua can not be empty, please provide valid value.')
+        raise ValueError('file_path value can not be empty, please provide valid value.')
 
     if not isinstance(file_path, str):
         raise TypeError(f'Expected type for file_path is string, but {type(file_path)} was given.')
