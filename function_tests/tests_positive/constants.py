@@ -65,4 +65,5 @@ MULTIPLE_LANGUAGES = [
     )
 ]
 
+# pylint: disable=anomalous-backslash-in-string
 EXPECTED_SYMBOLS_STR = "!.,/|\:;'\"[]{}?@^&$()*<>"  # noqa: W605
