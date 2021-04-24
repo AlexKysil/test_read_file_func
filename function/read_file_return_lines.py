@@ -1,5 +1,5 @@
 
-# pylint: disable=logging-fstring-interpolation
+# pylint: disable=f-string-without-interpolation
 def read_file_return_lines(file_path, N_lines=None):
     """
     This function reads *.txt file by given absolute path, and print last N lines
