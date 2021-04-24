@@ -1,6 +1,10 @@
-ENGLISH_TEXT = "src/eng_file.txt"
-SYMBOLS_FILE = 'src/signs_file.txt'
-EMPTY_FILE = 'src/empty_file.txt'
+"""
+File to save constant values for positive tests
+"""
+
+ENGLISH_TEXT = "/function_tests/src/eng_file.txt"
+SYMBOLS_FILE = '/function_tests/src/signs_file.txt'
+EMPTY_FILE = '/function_tests/src/empty_file.txt'
 
 LINES_LEN_VAL = [
     (
@@ -49,10 +53,12 @@ LINES_LEN_VAL = [
 
 MULTIPLE_LANGUAGES = [
     (
-        "src/rus_file.txt", 'ткуда был выслан в Варшаву под гласный надзор полиции за участие в революционных кружках[1].'
+        "/function_tests/src/rus_file.txt",
+        'ткуда был выслан в Варшаву под гласный надзор полиции за участие в революционных кружках[1].'
     ),
     (
-        "src/jap_file.txt", '任那、加羅、秦韓六國諸軍事、安東大將軍、倭國王。至齊建元中，及梁武帝時，并來朝貢'
+        "/function_tests/src/jap_file.txt",
+        '任那、加羅、秦韓六國諸軍事、安東大將軍、倭國王。至齊建元中，及梁武帝時，并來朝貢'
     )
 ]
 

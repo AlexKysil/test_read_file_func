@@ -14,6 +14,9 @@ def read_file_return_lines(file_path, N_lines=None):
     if not isinstance(file_path, str):
         raise TypeError(f'Expected type for file_path is string, but {type(file_path)} was given.')
 
+    if file_path[-3:] != 'txt':
+        raise ValueError(f'Expected file format is *.txt, but {file_path[-3:]} was given.')
+
     if N_lines:
         if not isinstance(N_lines, int):
             raise TypeError(f'Expected type for N_lines is int, but {type(N_lines)} was given.')
