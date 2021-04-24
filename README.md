@@ -29,7 +29,7 @@
 `pip3 install -r requirements.txt` ([pip help](https://help.dreamhost.com/hc/en-us/articles/115000699011-Using-pip3-to-install-Python3-modules))
 
 ## How to Run tests:
-**Note:** We are using [pytest](https://docs.pytest.org/en/stable/getting-started.html) as test framework, so follow [basic pytest rules](Create your first test) to run tests.
+**Note:** We are using [pytest](https://docs.pytest.org/en/stable/getting-started.html) as test framework, so follow [basic pytest rules](https://docs.pytest.org/en/stable/getting-started.html#create-your-first-test) to run tests.
 
 * Example how to run single test:
 `
