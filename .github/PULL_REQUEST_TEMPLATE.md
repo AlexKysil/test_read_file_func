@@ -1,6 +1,6 @@
-##### Extra information to know:
+##### Task ID/Ticket ID:
 
-##### Brief goal description:
+##### Brief description:
 
 ##### I`ve added screenshot with passed test
  - [ ] "Yes"
