@@ -1,6 +1,7 @@
 """
 File to save constant values for positive tests
 """
+# noqa: E122
 
 ENGLISH_TEXT = "/function_tests/src/eng_file.txt"
 SYMBOLS_FILE = '/function_tests/src/signs_file.txt'
@@ -8,23 +9,25 @@ EMPTY_FILE = '/function_tests/src/empty_file.txt'
 
 LINES_LEN_VAL = [
     (
-        5,[
+        5, [
             '\tFrom:Barcelona, Catalonia, Spain',
             '',
             '\tWeb designer: Abel Sutilo',
             '\tTwitter: @abelsutilo',
             '\tFrom:Sevilla, Andalucia, Spain'
-        ]
+            ]
     ),
-    (-5, [
+    (
+        -5, [
         '\tFrom:Barcelona, Catalonia, Spain',
         '',
         '\tWeb designer: Abel Sutilo',
         '\tTwitter: @abelsutilo',
         '\tFrom:Sevilla, Andalucia, Spain'
-    ]
-     ),
-    (0,[
+            ]
+    ),
+    (
+        0, [
         '/* TEAM */',
         '\tChef:Juanjo Bernabeu',
         '\tContact: hello [at] humanstxt.org',
@@ -46,8 +49,8 @@ LINES_LEN_VAL = [
         '\tWeb designer: Abel Sutilo',
         '\tTwitter: @abelsutilo',
         '\tFrom:Sevilla, Andalucia, Spain'
-    ]
-     )
+            ]
+    )
 ]
 
 
@@ -62,4 +65,4 @@ MULTIPLE_LANGUAGES = [
     )
 ]
 
-EXPECTED_SYMBOLS_STR = "!.,/|\:;'\"[]{}?@^&$()*<>"
+EXPECTED_SYMBOLS_STR = "!.,/|\:;'\"[]{}?@^&$()*<>"  # noqa: W605

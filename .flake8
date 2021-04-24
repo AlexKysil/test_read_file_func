@@ -1,3 +1,5 @@
 [flake8]
 ignore =  E701
 max-line-length = 121
+per-file-ignores =
+    function_tests/tests_positive/constants.py:E122, E123

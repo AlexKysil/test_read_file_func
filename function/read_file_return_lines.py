@@ -21,7 +21,6 @@ def read_file_return_lines(file_path, N_lines=None):
         if not isinstance(N_lines, int):
             raise TypeError(f'Expected type for N_lines is int, but {type(N_lines)} was given.')
 
-
     with open(file_path, "rt") as file:
         lines = file.read().splitlines()
 

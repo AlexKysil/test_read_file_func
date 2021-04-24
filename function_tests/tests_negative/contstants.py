@@ -15,12 +15,11 @@ INVALID_FILE_PATHS = [
     )
 ]
 
-
 INVALID_NLINES = [
     ("/function_tests/src/eng_file.txt", "N_lines", "Expected type for N_lines is int, but <class 'str'> was given."),
     (
         "/function_tests/src/eng_file.txt", [],
-        "[Errno 2] No such file or directory: \'/Users/okysil/PycharmProjects/test_read_file_func/function_tests/tests_negative/../function_tests/src/eng_file.txt\'"
+        "[Errno 2] No such file or directory: \'/Users/okysil/PycharmProjects/test_read_file_func/function_tests/tests_negative/../function_tests/src/eng_file.txt\'"   # noqa: E501
     )
 ]
 

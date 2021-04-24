@@ -3,6 +3,7 @@
 import sys
 from io import StringIO
 
+
 # pylint: disable=attribute-defined-outside-init
 class ReadTeminalOutput(list):
     """
