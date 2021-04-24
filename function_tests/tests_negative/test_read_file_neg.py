@@ -13,6 +13,7 @@ LOGGER = logging.getLogger('logger')
 
 @pytest.mark.negative
 @pytest.mark.parametrize("path, expected_error", INVALID_FILE_PATHS)
+# pylint: disable=logging-fstring-interpolation
 def test_read_by_wrong_path(path, expected_error):
 
     LOGGER.info(f"Start test[negative]: test_read_by_wrong_path with path value: {path}")
@@ -28,6 +29,7 @@ def test_read_by_wrong_path(path, expected_error):
 
 @pytest.mark.negative
 @pytest.mark.parametrize("valid_path, n_lines, expected_error", INVALID_NLINES)
+# pylint: disable=logging-fstring-interpolation
 def test_read_with_wrong_nlines(valid_path, n_lines, expected_error):
 
     LOGGER.info(f"Start test[negative]: test_read_with_wrong_nlines with n_lines value: {n_lines}")

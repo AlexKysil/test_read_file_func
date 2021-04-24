@@ -31,6 +31,7 @@ def test_read_only_by_path():
 
 @pytest.mark.positive
 @pytest.mark.parametrize("n_lines, expected_lines", LINES_LEN_VAL)
+# pylint: disable=logging-fstring-interpolation
 def test_read_file_dif_lines(n_lines, expected_lines):
 
     LOGGER.info(f"Start test[positive]: test_read_file_dif_lines with n_lines value: {n_lines}")
@@ -49,6 +50,7 @@ def test_read_file_dif_lines(n_lines, expected_lines):
 
 @pytest.mark.positive
 @pytest.mark.parametrize("path, expected_result", MULTIPLE_LANGUAGES)
+# pylint: disable=logging-fstring-interpolation
 def test_read_dif_languages(path, expected_result):
 
     LOGGER.info(f"Start test[positive]: test_read_dif_languages with path value: {path}")
